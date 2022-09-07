@@ -49,17 +49,23 @@
   .hero {
     grid-template-columns: 1fr;
     grid-gap: 2rem;
+    padding: 1rem;
   }
   .right-side {
     grid-row-start: 1;
-    height: 30% !important;
+    max-width: 70%;
+    justify-self: center;
   }
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 390px) {
   .heading {
     font-size: 1.2rem;
   }
   .left-side {
     grid-row-gap: 1rem;
+  }
+  .right-side {
+    grid-row-start: 1;
+    max-width: 80%;
   }
 }
