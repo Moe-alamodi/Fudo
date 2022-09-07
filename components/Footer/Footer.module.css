@@ -1,0 +1,17 @@
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+.footer-container span {
+  font-weight: bold;
+  color: #f54748;
+}
+.socials {
+  display: grid;
+  grid-template-columns: repeat(3, 3rem);
+  justify-items: center;
+}

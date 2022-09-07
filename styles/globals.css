@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+html,
+body {
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: var(--themeBlack);
+  background: var(--background-color);
+  overflow-x: hidden;
+  max-width: 1300px;
+}
+
+:root {
+  --themeRed: #f54748;
+  --themeBlack: #2e2e2e;
+  --pink: #fdecec;
+  --gray: #828282;
+  --shadow: -4px 12px 20px -2px rgba(0, 0, 0, 0.19);
+  --background-color: linear-gradient(
+    180deg,
+    rgba(255, 237, 237, 0.85) 0%,
+    rgba(255, 255, 255, 0) 30rem
+  );
+  --cartBack: rgba(255, 255, 255, 0.38);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: pink;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--themeRed);
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 300ms ease;
+}
+h1 {
+  margin: 0;
+}
+
+/* Logo styles */
+.logo {
+  cursor: pointer;
+}
+.logo-link {
+  display: flex;
+  justify-content: baseline;
+  color: var(--pink);
+  background-color: rgba(46, 46, 46, 0.98);
+  border-radius: 10px;
+  padding: 1px;
+}
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    var(--themeRed) 0.89%,
+    var(--themeRed) 17.23%,
+    var(--themeRed) 75.04%,
+    var(--pink) 55.12%,
+    var(--pink) 71.54%,
+    var(--pink) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.primary {
+  padding: 1rem;
+  background-color: var(--themeRed);
+  color: var(--pink);
+  border-radius: 4rem;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  justify-self: self-start;
+}
+.btn-padding {
+  padding: 1rem 2.5rem;
+}
+@media screen and (max-width: 800px) {
+  .primary {
+    justify-self: center;
+  }
+}
