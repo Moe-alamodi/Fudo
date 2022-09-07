@@ -52,7 +52,9 @@ a {
 * {
   box-sizing: border-box;
   transition: all 300ms ease;
+  scroll-behavior: smooth;
 }
+
 h1 {
   margin: 0;
 }
@@ -65,8 +67,13 @@ h1 {
   display: flex;
   justify-content: baseline;
   color: var(--pink);
-  background-color: rgba(46, 46, 46, 0.98);
-  border-radius: 10px;
+  background: linear-gradient(
+    144.39deg,
+    var(--pink) -278.56%,
+    var(--gray) -78.47%,
+    var(--themeBlack) 11.61%
+  );
+  border-radius: 15px;
   padding: 1px;
 }
 .text-gradient {
@@ -88,17 +95,55 @@ h1 {
   padding: 1rem;
   background-color: var(--themeRed);
   color: var(--pink);
-  border-radius: 4rem;
+  border-radius: 1rem;
   border: none;
   font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
   justify-self: self-start;
+  transition: 0.3s;
+}
+.primary:hover {
+  background: var(--themeBlack);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: 0.3s;
 }
 .btn-padding {
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
 }
 @media screen and (max-width: 800px) {
   .primary {
     justify-self: center;
+  }
+  .logo-link {
+    font-size: 1rem;
+    justify-content: baseline;
+    align-items: center;
+  }
+  .text-gradient {
+    font-size: 1.3rem;
+  }
+}
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
   }
 }
