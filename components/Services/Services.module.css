@@ -1,23 +1,15 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-}
-.container span {
-  color: var(--themeRed);
-  font-weight: 700;
-}
 .services-container {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 20rem);
   justify-items: center;
   align-items: center;
   grid-gap: 1rem;
 }
 .services-container p {
+  font-size: 0.98rem;
+  line-height: 1.3rem;
+  padding: 0 0.5rem;
   color: var(--gray);
   font-weight: normal;
 }
@@ -34,12 +26,23 @@
   box-shadow: 20px 20px 60px #d7c9c9, -20px -20px 60px #ffffff;
   transition: 0.3s;
 }
+@media screen and (max-width: 930px) {
+  .services-container {
+    grid-template-columns: repeat(3, 32%);
+  }
+}
+@media screen and (max-width: 810px) {
+  .services-container {
+    grid-template-columns: repeat(2, 20rem);
+  }
+}
+@media screen and (max-width: 650px) {
+  .services-container {
+    grid-template-columns: repeat(1, 20rem);
+  }
+}
 
 @media screen and (max-width: 800px) {
-  .services-container {
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
   .service:hover {
     background: linear-gradient(145deg, #fffdfd, #e4d4d4);
     box-shadow: 20px 20px 60px #d7c9c9, -20px -20px 60px #ffffff;

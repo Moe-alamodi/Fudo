@@ -29,7 +29,9 @@ const Hero = () => {
         <Button
           btn={"primary btn-padding"}
           onClick={() => (window.location = "#menu")}
-        />
+        >
+          Get Started
+        </Button>
       </div>
       <div className={styles["right-side"]}>
         <Image src={HeroImg} layout="intrinsic" alt="Eating Pizza" />

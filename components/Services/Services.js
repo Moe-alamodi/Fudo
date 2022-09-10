@@ -4,9 +4,8 @@ import Image from "next/image";
 import styles from "./Services.module.css";
 
 const Services = () => {
-  console.log(servicesData);
   return (
-    <div className={`padding1 ${styles.container}`}>
+    <div className={`padding1 container`}>
       <span>WHAT WE SERVE</span>
       <h1>
         Your Favourite Food
@@ -19,8 +18,8 @@ const Services = () => {
             <Image
               src={service.img}
               layout="intrinsic"
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt=""
             />
             <h3>{service.title}</h3>

@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.imageWrapper {
+  height: 20rem;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  border-radius: 2rem 0 2rem 0;
+}
+.imageWrapper img:hover {
+  transform: scale(1.15);
+
+  cursor: pointer;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}

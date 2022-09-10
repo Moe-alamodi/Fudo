@@ -5,7 +5,9 @@ body {
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
   color: var(--themeBlack);
-  background: var(--background-color);
+  background: #fdecec;
+background: -webkit-linear-gradient(186deg, #fdecec 0%, #ffffff 100%);
+background: linear-gradient(180deg, #fdecec 0%, #ffffff 20%);
   overflow-x: hidden;
   max-width: 1300px;
 }
@@ -18,9 +20,8 @@ body {
   --shadow: -4px 12px 20px -2px rgba(0, 0, 0, 0.19);
   --background-color: linear-gradient(
     180deg,
-    #ffededd9 0%,
-    rgba(255, 255, 255, 0) 30rem
-  );
+    var(--pink) 20%,
+    #ffffff 100%)
   --cartBack: rgba(255, 255, 255, 0.38);
 }
 
@@ -105,9 +106,7 @@ h6 {
   font-size: 2rem;
 }
 .primary {
-  padding: 1rem;
   background-color: var(--themeRed);
-
   color: var(--pink);
   border-radius: 1rem;
   border: none;
@@ -139,6 +138,19 @@ h6 {
   .text-gradient {
     font-size: 1.3rem;
   }
+}
+.container {
+  margin: 0 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.container span {
+  color: var(--themeRed);
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 .bump {
   animation: bump 300ms ease-out;
