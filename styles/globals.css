@@ -5,9 +5,9 @@ body {
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
   color: var(--themeBlack);
-  background: #fdecec;
-background: -webkit-linear-gradient(186deg, #fdecec 0%, #ffffff 100%);
-background: linear-gradient(180deg, #fdecec 0%, #ffffff 20%);
+  /* background: #fdecec; */
+  background: -webkit-linear-gradient(186deg, #fdecec 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #fdecec 0%, #ffffff 20%);
   overflow-x: hidden;
   max-width: 1300px;
 }
@@ -18,10 +18,7 @@ background: linear-gradient(180deg, #fdecec 0%, #ffffff 20%);
   --pink: #fdecec;
   --gray: #828282;
   --shadow: -4px 12px 20px -2px rgba(0, 0, 0, 0.19);
-  --background-color: linear-gradient(
-    180deg,
-    var(--pink) 20%,
-    #ffffff 100%)
+  --background-color: linear-gradient(180deg, var(--pink) 20%, #ffffff 100%);
   --cartBack: rgba(255, 255, 255, 0.38);
 }
 
@@ -54,9 +51,10 @@ li {
   list-style: none;
 }
 * {
+  scroll-behavior: smooth !important;
+
   box-sizing: border-box;
   transition: all 300ms ease;
-  scroll-behavior: smooth;
 }
 
 h1,
@@ -110,21 +108,50 @@ h6 {
   color: var(--pink);
   border-radius: 1rem;
   border: none;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
   justify-self: self-start;
-  transition: 0.3s;
+  padding: 0.5rem 1rem;
 }
 .primary:hover {
   background: var(--themeBlack);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  transition: 0.3s;
 }
-.btn-padding {
-  padding: 1rem 2rem;
+.btn-hero {
+  padding: 1rem 2rem !important;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.order-btn {
+  align-self: flex-start !important;
+}
+.btnSize {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+.btnSizeUnselected {
+  border: 1px solid var(--themeRed);
+  color: var(--themeRed);
+  background-color: rgba(255, 255, 255, 0);
+}
+.btnSizeUnselected:hover {
+  background: var(--themeRed);
+  color: var(--pink);
+}
+.btnSizeSelected {
+  background: var(--themeRed);
+  border: 1px solid var(--themeRed);
+
+  color: var(--pink);
+}
+.btnSizeSelected:hover {
+  background: var(--themeRed);
+  border: 1px solid var(--themeRed);
+
+  color: var(--pink);
 }
 @media screen and (max-width: 800px) {
   .primary {
@@ -137,6 +164,10 @@ h6 {
   }
   .text-gradient {
     font-size: 1.3rem;
+  }
+  .btn-hero {
+    justify-self: center;
+    align-self: center;
   }
 }
 .container {

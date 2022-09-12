@@ -9,6 +9,7 @@ import { UilTimes } from "@iconscout/react-unicons";
 import { UilPizzaSlice } from "@iconscout/react-unicons";
 const Header = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+
   return (
     <div className={styles["header-container"]}>
       <Logo />
@@ -44,7 +45,7 @@ const Header = () => {
         <Link href="/">
           <a>Home</a>
         </Link>
-        <Link href="/menu">
+        <Link href="/#menu">
           <a>Menu</a>
         </Link>
         <Link href="/contact">

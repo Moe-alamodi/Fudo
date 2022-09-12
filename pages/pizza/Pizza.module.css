@@ -7,7 +7,7 @@
 
 .imageWrapper {
   height: 20rem;
-  width: 50%;
+  width: 60%;
   position: relative;
   overflow: hidden;
   margin-bottom: 0.5rem;
@@ -15,10 +15,53 @@
 }
 .imageWrapper img:hover {
   transform: scale(1.15);
-
-  cursor: pointer;
 }
-.btn {
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.sizes {
+  display: flex;
+  gap: 0.5rem;
+}
+.sizes > span:nth-child(1) {
+  /* font-weight: bold; */
+  font-size: 1rem;
+}
+.btnSize {
+  cursor: pointer;
   padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  border-radius: 1rem;
+  border: 1px solid var(--themeRed);
+  color: var(--themeRed);
+  background-color: rgba(255, 255, 255, 0);
+}
+.btnSize:hover {
+  background: var(--themeRed);
+  color: var(--pink);
+}
+.SizeVaraints {
+  display: flex;
+  gap: 0.3rem;
+}
+.quantity {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+.quantity > :nth-child(1) {
+  /* font-weight: bold; */
+  margin-right: 1rem;
+}
+@media screen and (max-width: 810px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .imageWrapper {
+    width: 80%;
+  }
 }

@@ -1,13 +1,17 @@
 .hero {
-  padding: 3rem 1rem;
+  padding: 3rem 2rem;
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 2fr 2fr;
   grid-gap: 4rem;
-  align-items: flex-start;
+  align-items: center;
 }
 .left-side {
   display: grid;
   grid-row-gap: 2rem;
+}
+.right-side {
+  /* width: 29vw !important;
+  justify-self: start; */
 }
 .cherry {
   font-weight: 600;
@@ -16,7 +20,7 @@
   justify-self: baseline;
 }
 .heading {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 .heading span {
@@ -29,12 +33,12 @@
 }
 @media screen and (max-width: 1270px) {
   .heading {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 1072px) {
   .heading {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .hero {
     grid-template-columns: 1fr 1fr;

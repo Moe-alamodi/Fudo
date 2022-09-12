@@ -35,7 +35,7 @@ const Menu = ({ data }) => {
               <p>{pizza.details}</p>
               <div className={styles.buyOption}>
                 <h4>{`$${pizza.price[2]}`}</h4>
-                <Button btn="primary">+</Button>
+                <Button btn="primary">Add</Button>
               </div>
             </li>
           );
